@@ -37,19 +37,19 @@ function App() {
     },
     {
       title: "PHP",
-      file: "js.png",
+      file: "php.png",
       childs: [],
     },
     {
       title: "SQL",
-      file: "js.png",
+      file: "sql.png",
       childs: [],
     },
   ];
 
   return (
     <div className="text-gray-100 bg-gray-700">
-      <header className="flex flex-col items-center justify-center h-screen bg-[url('/src/img/background.png')]">
+      <header className="flex flex-col items-center justify-center h-screen bg-[url('/src/img/background.png')] pb-24 md:pb-40">
         <img
           src="/src/img/vincentbriand.jpg"
           alt="photo de Vincent BRIAND"
@@ -71,26 +71,39 @@ function App() {
           aliquam vestibulum morbi blandit.
         </p>
       </header>
-      <body>
-        <div className="h-screen">
-          <div className="flex items-center justify-around h-screen max-w-4xl m-auto">
+      <main>
+        <div className="flex items-center justify-center h-screen pb-24 md:pb-40">
+          <div
+            className={`grid grid-cols-1 gap-2 lg:gap-10 lg:grid-cols-${languages.length}`}
+          >
             {languages.map((language) => (
-              <div className="flex flex-col text-center">
-                <div className="w-32 h-32 bg-black rounded-full"></div>
-                <p>{language.title}</p>
-                {language.childs.map((child) => (
-                  <div className="w-32 h-32 bg-black rounded-full">
-                    {child.title}
+              <div className="flex items-center lg:flex-col">
+                <div className="flex flex-col mb-2 text-center">
+                  <div className="flex items-center justify-center w-24 h-24 bg-black/[.3] rounded-full lg:mb-2 lg:w-32 lg:h-32 select-none">
+                    <img
+                      className="w-16 h-16 lg:w-20 lg:h-20"
+                      src={`/src/img/${language.file}`}
+                      draggable="false"
+                    />
                   </div>
-                ))}
+                  {/* <p>{language.title}</p> */}
+                </div>
+                <div className="flex items-center content-around">
+                  {language.childs.map((child) => (
+                    <div className="flex flex-col items-center w-24">
+                      <div className="w-8 h-8 bg-white rounded-full select-none"></div>
+                      <p className="text-xs">{child.title}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
         </div>
         <div className="h-screen"></div>
-      </body>
+      </main>
       <footer className="flex justify-center">
-        <div className="fixed grid w-screen max-w-2xl grid-cols-4 pointer-events-none select-none bottom-16">
+        <div className="fixed grid w-screen max-w-2xl grid-cols-4 text-xs pointer-events-none select-none bottom-4 md:text-base md:bottom-16">
           <div className="text-center">
             <a
               href="#"
