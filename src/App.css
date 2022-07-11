@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.pages {
+  position: relative;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  height: 100%;
+  max-height: 100vh;
+}
+
+.page {
+  scroll-snap-align: center;
+}
