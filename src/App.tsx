@@ -1,9 +1,9 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Footer from './components/Footer';
+import Header from './components/Header';
 
-import "./App.css";
-import languages from "./style/json/languages.json";
-import projects from "./style/json/projects.json";
+import './App.css';
+import languages from './style/json/languages.json';
+import projects from './style/json/projects.json';
 
 function App() {
   return (
@@ -33,17 +33,17 @@ function App() {
                   id="languages"
                 >
                   {language.childs.map((child, i) => {
-                    let marginTop = "0";
+                    let marginTop = '0';
                     if (
                       i === language.childs.length - 1 &&
                       (language.childs.length - 1) % 3 === 0
                     ) {
-                      marginTop = "10px";
+                      marginTop = '10px';
                     } else if (
                       (i + 2) % 3 === 0 &&
                       i !== language.childs.length - 1
                     ) {
-                      marginTop = "10px";
+                      marginTop = '10px';
                     }
                     return (
                       <div
