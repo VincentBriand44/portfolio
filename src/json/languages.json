@@ -8,7 +8,10 @@
     "title": "CSS",
     "file": "css.png",
     "childs": [
-      { "title": "Tailwind CSS", "file": "tailwindcss.png" },
+      {
+        "title": "Tailwind CSS",
+        "file": "tailwindcss.png"
+      },
       {
         "title": "Bootstrap",
         "file": "bootstrap.png"
@@ -27,10 +30,17 @@
         "title": "React",
         "file": "react.png"
       },
-      { "title": "React", "file": "react.png" },
       {
         "title": "React",
         "file": "react.png"
+      },
+      {
+        "title": "Node JS",
+        "file": "node.png"
+      },
+      {
+        "title": "Node JS",
+        "file": "node.png"
       }
     ]
   },

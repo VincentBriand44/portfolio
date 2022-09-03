@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Présentation",
+    "link": "presentation",
+    "icon": "pencil"
+  },
+  {
+    "title": "Languages",
+    "link": "languages",
+    "icon": "coding"
+  },
+  {
+    "title": "Projets",
+    "link": "projects",
+    "icon": "project"
+  },
+  {
+    "title": "Contact",
+    "link": "contact",
+    "icon": "mail"
+  }
+]
