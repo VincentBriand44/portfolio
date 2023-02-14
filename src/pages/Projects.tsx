@@ -12,10 +12,12 @@ const Projects = () => (
             <a
               href={link ?? undefined}
               key={index}
-              className='flex items-center lg:flex-colflex flex-col mb-2 text-center justify-center w-32 md:w-48 lg:w-64 aspect-video bg-black/[.3] rounded-lg select-none bg-cover font-bold hover:bg-black/[.5] hover:text-white bg-center'
+              className=' lg:flex-col flex flex-col mb-2 w-32 md:w-48 lg:w-64 aspect-video bg-black/[.3] rounded-lg select-none bg-cover font-bold bg-center'
               style={{ backgroundImage: `url(/src/img/projects/${file})` }}
             >
-              <p>{title}</p>
+              <div className='hover:bg-black/[.5] w-full flex h-full items-center justify-center rounded-lg'>
+                <p>{title}</p>
+              </div>
             </a>
           )
       )}
