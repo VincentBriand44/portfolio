@@ -15,8 +15,8 @@ const PopupProject = ({ title, file, setPopup }) => {
   }, [])
 
   return (
-    <div className="popupProject fixed inset-0 h-full w-full bg-black/60" onClick={() => setPopup({ title: null, link: null })}>
-      <img className='w-full h-full p-40 object-contain' src={`/src/assets/img/projects/${file}`} alt={title} />
+    <div className="fixed inset-0 w-full h-full popupProject bg-black/60" onClick={() => setPopup({ title: null, link: null })}>
+      <img className='object-contain w-full h-full p-4 sm:p-36' src={`/src/assets/img/projects/${file}`} alt={title} />
     </div>
   );
 };
