@@ -22,7 +22,7 @@ const Projects = () => {
                 style={{ backgroundImage: `url(/src/assets/img/projects/${file})` }}
                 onClick={() => setPopup({ title: title, file: file })}
               >
-                <div className='hover:bg-black/[.5] w-full flex h-full items-center justify-center rounded-lg'>
+                <div className='bg-black/[.3] hover:bg-black/[.1] w-full flex h-full items-center justify-center rounded-lg'>
                   <p>{title}</p>
                 </div>
               </a>
