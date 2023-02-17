@@ -1,4 +1,4 @@
-import items from '../json/navbar.json'
+import items from '../assets/json/navbar.json'
 
 const Footer = () => (
   <footer className='flex justify-center'>
@@ -11,7 +11,7 @@ const Footer = () => (
           >
             <div className='mx-auto border rounded-full w-14 h-14 border-slate-900/[.5] bg-slate-600/[.3] hover:bg-slate-800/[.3]'>
               <img
-                src={`/src/img/icons/${icon}.png`}
+                src={`/src/assets/img/icons/${icon}.png`}
                 alt={title}
                 className='p-4'
                 draggable='false'

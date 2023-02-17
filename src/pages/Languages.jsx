@@ -1,4 +1,4 @@
-import languages from '../json/languages.json'
+import languages from '../assets/json/languages.json'
 
 const Languages = () => (
   <div
@@ -12,7 +12,7 @@ const Languages = () => (
             <div className='flex items-center justify-center w-24 h-24 bg-black/[.3] rounded-full lg:w-32 lg:h-32 select-none'>
               <img
                 className='w-16 h-16 lg:w-20 lg:h-20'
-                src={`/src/img/languages/${file}`}
+                src={`/src/assets/img/languages/${file}`}
                 draggable='false'
                 title={title}
               />
@@ -35,7 +35,7 @@ const Languages = () => (
                 >
                   <div className='flex items-center justify-center w-8 h-8 text-center bg-white rounded-full select-none'>
                     <img
-                      src={`/src/img/languages/${file}`}
+                      src={`/src/assets/img/languages/${file}`}
                       className='w-6 h-6'
                       draggable='false'
                       title={title}
