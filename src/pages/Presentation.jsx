@@ -12,7 +12,7 @@ const Presentation = () => (
       draggable='false'
     />
     <h1 className='text-3xl font-bold'>{fullname}</h1>
-    <p className='max-w-4xl mt-10 text-center'>{description}</p>
+    <p className='max-w-4xl mt-10 text-center mx-4'>{description}</p>
   </header>
 )
 

@@ -1,7 +1,19 @@
 {
   "fullname": "Vincent BRIAND",
   "email": "pro.vincent.briand@pm.me",
-  "github": "VincentBriand44",
-  "linkedin": "vincent.briand44",
-  "description": "I am a student in computer science at the University of Lille. I am passionate about web development and I am currently looking for an internship in this field."
+  "description": "I am a student in computer science at the University of Lille. I am passionate about web development and I am currently looking for an internship in this field.",
+  "socials": [
+    {
+      "title": "GitHub",
+      "icon": null,
+      "name": "VincentBriand44",
+      "link": null
+    },
+    {
+      "title": "Linkedin",
+      "icon": null,
+      "name": "vincent.briand44",
+      "link": null
+    }
+  ]
 }

@@ -15,17 +15,17 @@ const Projects = () => {
         {projects.map(
           ({ title, file, link }, index) =>
             index < 9 && (
-              <a
-                href={link ?? undefined}
+              <div
+                // href={link ?? undefined}
                 key={index}
-                className=' lg:flex-col flex flex-col mb-2 w-32 md:w-48 lg:w-64 aspect-video bg-black/[.3] rounded-lg select-none bg-cover font-bold bg-center'
+                className='lg:flex-col flex flex-col mb-2 w-32 md:w-48 lg:w-64 aspect-video bg-black/[.3] rounded-lg select-none bg-cover font-bold bg-center'
                 style={{ backgroundImage: `url(/src/assets/img/projects/${file})` }}
-                onClick={() => setPopup({ title: title, file: file })}
+                onClick={() => file && setPopup({ title: title, file: file })}
               >
-                <div className='bg-black/[.3] hover:bg-black/[.1] w-full flex h-full items-center justify-center rounded-lg'>
+                <div className='bg-black/[.3] hover:bg-black/[.1] w-full flex h-full p-2 items-center justify-center rounded-lg'>
                   <p>{title}</p>
                 </div>
-              </a>
+              </div>
             )
         )}
         {popup.title !== null && <PopupProject title={popup.title} file={popup.file} setPopup={setPopup} />}
