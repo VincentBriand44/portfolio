@@ -1,57 +1,53 @@
 [
   {
     "title": "HTML",
-    "file": "html.png",
+    "file": "html.webp",
     "childs": []
   },
   {
     "title": "CSS",
-    "file": "css.png",
+    "file": "css.webp",
     "childs": [
       {
         "title": "Tailwind CSS",
-        "file": "tailwindcss.png"
+        "file": "tailwind.webp"
+      },
+      {
+        "title": "SASS/SCSS",
+        "file": "sass.webp"
       },
       {
         "title": "Bootstrap",
-        "file": "bootstrap.png"
+        "file": "bootstrap.webp"
       }
     ]
   },
   {
     "title": "JS",
-    "file": "js.png",
+    "file": "js.webp",
     "childs": [
       {
-        "title": "Node JS",
-        "file": "node.png"
+        "title": "ReactJS",
+        "file": "react.webp"
       },
       {
-        "title": "React",
-        "file": "react.png"
+        "title": "NodeJS",
+        "file": "node.webp"
       },
       {
-        "title": "React",
-        "file": "react.png"
-      },
-      {
-        "title": "Node JS",
-        "file": "node.png"
-      },
-      {
-        "title": "Node JS",
-        "file": "node.png"
+        "title": "ExpressJS",
+        "file": "express.webp"
       }
     ]
   },
   {
     "title": "PHP",
-    "file": "php.png",
+    "file": "php.webp",
     "childs": []
   },
   {
     "title": "SQL",
-    "file": "sql.png",
+    "file": "sql.webp",
     "childs": []
   }
 ]

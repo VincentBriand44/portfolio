@@ -14,12 +14,13 @@ const Languages = () => (
                 className='w-16 h-16 lg:w-20 lg:h-20'
                 src={`/src/img/languages/${file}`}
                 draggable='false'
+                title={title}
               />
             </div>
             {/* <p>{title}</p> */}
           </div>
           <div className='flex flex-wrap justify-center w-24 ml-2 lg:ml-0 lg:w-32 last:mt-0'>
-            {childs.map(({ file }, i, a) => {
+            {childs.map(({ title, file }, i, a) => {
               let marginTop = '0'
               if (i === a.length - 1 && (a.length - 1) % 3 === 0) {
                 marginTop = '10px'
@@ -37,6 +38,7 @@ const Languages = () => (
                       src={`/src/img/languages/${file}`}
                       className='w-6 h-6'
                       draggable='false'
+                      title={title}
                     />
                   </div>
                 </div>

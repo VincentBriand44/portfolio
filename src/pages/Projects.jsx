@@ -22,6 +22,12 @@ const Projects = () => (
           )
       )}
     </div>
+    <div className="popupNewSite">
+      <div className="popupNewSite-box">
+        <span id="popupNewSiteClose">X</span>
+        <img src="/src/img/projects/flashhost.jfif" alt="" />
+      </div>
+    </div>
   </div>
 )
 

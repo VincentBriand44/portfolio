@@ -7,13 +7,13 @@ const Footer = () => (
         <div className='text-center' key={link}>
           <a
             href={`#${link}`}
-            className='flex flex-col pointer-events-auto hover:first:animate-bounce'
+            className='flex flex-col pointer-events-auto hover:animate-bounce nav-custom'
           >
             <div className='mx-auto border rounded-full w-14 h-14 border-slate-900/[.5] bg-slate-600/[.3] hover:bg-slate-800/[.3]'>
               <img
                 src={`/src/img/icons/${icon}.png`}
                 alt={title}
-                className='p-4 hover:animate-pulse'
+                className='p-4'
                 draggable='false'
               />
             </div>
