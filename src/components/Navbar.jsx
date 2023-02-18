@@ -9,7 +9,7 @@ const Footer = () => {
 
   return scrollable && (
     <footer className='flex justify-center'>
-      <div className='fixed grid w-screen max-w-2xl grid-cols-4 text-xs pointer-events-none select-none bottom-4 md:text-base md:bottom-16'>
+      <div className='fixed grid w-screen max-w-2xl grid-cols-4 text-xs pointer-events-none select-none bottom-4 nav:text-base nav:bottom-12'>
         {items.map(({ title, link, icon }) => (
           <div className='text-center' key={title}>
             <a
@@ -18,7 +18,7 @@ const Footer = () => {
             >
               <div className='mx-auto border rounded-full w-14 h-14 border-slate-900/[.5] bg-slate-600/[.3] hover:bg-slate-800/[.3]'>
                 <img
-                  src={`/src/assets/img/icons/${icon}.png`}
+                  src={`/src/assets/img/icons/${icon}.webp`}
                   alt={title}
                   className='p-4'
                   draggable='false'

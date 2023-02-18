@@ -2,46 +2,60 @@
   {
     "title": "Manue",
     "file": "",
+    "desc": null,
     "link": null
   },
   {
     "title": "Sacrificial Reptilian Corporation",
     "file": "src.webp",
+    "desc": null,
     "link": null
   },
   {
     "title": "Uber calèche",
     "file": "ubercaleche.webp",
+    "desc": null,
     "link": null
   },
   {
     "title": "Le déclin des âmes",
     "file": "ledeclindesames.webp",
+    "desc": null,
     "link": null
   },
   {
     "title": "Star Love",
     "file": "starlove.webp",
+    "desc": null,
     "link": null
   },
   {
     "title": "Lord Of Pings",
     "file": "lordofpings.webp",
+    "desc": null,
     "link": null
   },
   {
     "title": "Portefolio",
     "file": "",
+    "desc": null,
     "link": null
   },
   {
     "title": "Site vitrine - Flash-Host",
     "file": "flashhost.webp",
-    "link": null
+    "desc": "Hébergeur de serveurs de jeux",
+    "links": [
+      "https://flash-host.fr",
+      "https://github.com"
+    ]
   },
   {
     "title": "Gman - StupidCow",
     "file": "gman.webp",
-    "link": null
+    "desc": null,
+    "link": [
+      "https://github.com"
+    ]
   }
 ]
