@@ -2,7 +2,7 @@ import { description, fullname } from '../assets/json/config.json'
 
 const Presentation = () => (
   <header
-    className="flex flex-col items-center justify-center h-full bg-[url('/src/assets/img/background.webp')] pb-24 md:pb-40 page snap-center"
+    className="flex flex-col items-center justify-center h-full bg-[url('/src/assets/img/background.webp')] bg-center bg-cover pb-24 md:pb-40 page snap-center"
     id='presentation'
   >
     <img
