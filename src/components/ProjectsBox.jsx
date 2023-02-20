@@ -10,7 +10,9 @@ const ProjectsBox = ({ project, setPopup }) => {
       style={{
         backgroundImage: file
           ? `url(/src/assets/img/projects/${file})`
-          : 'url(/src/assets/img/no-image.webp)'
+          : title
+          ? 'url(/src/assets/img/no-image.webp)'
+          : 'none'
       }}
       onClick={() =>
         title &&
