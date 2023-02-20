@@ -2,17 +2,23 @@ import languages from '../assets/json/languages.json'
 
 const Languages = () => (
   <div
-    className='flex items-center justify-center h-full pb-24 page md:pb-40 snap-center'
+    className='flex items-center justify-center h-full pb-24 lg:justify-start page md:pb-40 snap-center'
     id='languages'
   >
-    <div className={`grid grid-cols-1 gap-2 lg:gap-10 lg:grid-cols-5`}>
+    <div
+      className={`flex flex-wrap justify-center lg:w-full p-8 overflow-x-scroll sm:overflow-hidden max-h-full flex-col gap-2 lg:gap-10 lg:flex-row gap-x-12`}
+    >
       {languages.map(({ title, file, childs }) => (
-        <div key={title} className='flex items-center gap-4 lg:flex-col'>
+        <div key={title} className='flex items-center gap-2 lg:flex-col'>
           <div className='flex flex-col text-center'>
-            <div className='flex items-center justify-center w-24 h-24 bg-black/[.3] rounded-full lg:w-32 lg:h-32 select-none'>
+            <div className='flex justify-center items-center w-14 h-14 bg-black/[.3] rounded-full lg:w-28 lg:h-28 select-none'>
               <img
-                className='w-16 h-16 lg:w-20 lg:h-20'
-                src={`/src/assets/img/languages/${file}`}
+                className='w-8 h-8 lg:w-16 lg:h-16'
+                src={
+                  file
+                    ? `/src/assets/img/languages/${file}`
+                    : '/src/assets/img/no-image.webp'
+                }
                 draggable='false'
                 title={title}
               />
