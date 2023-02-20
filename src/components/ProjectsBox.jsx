@@ -1,5 +1,6 @@
 const ProjectsBox = ({ project, setPopup }) => {
   const { title, links, desc, file } = project
+
   return (
     <div
       // href={link ?? undefined}
@@ -12,6 +13,7 @@ const ProjectsBox = ({ project, setPopup }) => {
           : 'url(/src/assets/img/no-image.webp)'
       }}
       onClick={() =>
+        title &&
         setPopup({
           title: title,
           links: links,
