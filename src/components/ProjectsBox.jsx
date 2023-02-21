@@ -9,13 +9,13 @@ const ProjectsBox = ({ project, setPopup }) => {
       className={`lg:flex-col flex flex-col mb-2 w-32 md:w-48 lg:w-64 aspect-video bg-black/[.3] rounded-lg select-none font-bold bg-center bg-no-repeat ${
         file ? 'bg-cover' : 'bg-32'
       }`}
-      style={{
-        backgroundImage: file
-          ? `url(/assets/img/projects/${file})`
-          : title
-          ? noImage
-          : 'none'
-      }}
+      style={
+        title && {
+          backgroundImage: `url(${
+            file ? `/assets/img/projects/${file}` : noImage
+          })`
+        }
+      }
       onClick={() =>
         title &&
         setPopup({
