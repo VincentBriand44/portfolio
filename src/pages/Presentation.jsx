@@ -15,7 +15,9 @@ const Presentation = () => (
     <img
       src={image ? `/assets/img/${image}` : noImage}
       alt={`photo de ${fullname}`}
-      className='object-cover w-40 h-40 mx-auto my-5 rounded-full'
+      className={`object-cover w-40 h-40 mx-auto my-5 rounded-full bg-slate-900 ${
+        !image && 'p-8'
+      }`}
       draggable='false'
     />
     <h1 className='text-3xl font-bold'>{fullname}</h1>
