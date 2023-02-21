@@ -1,45 +1,45 @@
 [
   {
     "title": "Manue",
-    "file": "",
+    "file": null,
     "desc": null,
-    "link": null
+    "link": []
   },
   {
     "title": "Sacrificial Reptilian Corporation",
     "file": "src.webp",
     "desc": null,
-    "link": null
+    "link": []
   },
   {
     "title": "Uber calèche",
     "file": "ubercaleche.webp",
     "desc": null,
-    "link": null
+    "link": []
   },
   {
     "title": "Le déclin des âmes",
     "file": "ledeclindesames.webp",
     "desc": null,
-    "link": null
+    "link": []
   },
   {
     "title": "Star Love",
     "file": "starlove.webp",
     "desc": null,
-    "link": null
+    "link": []
   },
   {
     "title": "Lord Of Pings",
     "file": "lordofpings.webp",
     "desc": null,
-    "link": null
+    "link": []
   },
   {
     "title": "Portefolio",
-    "file": "",
+    "file": null,
     "desc": null,
-    "link": null
+    "link": []
   },
   {
     "title": "Site vitrine - Flash-Host",
@@ -60,7 +60,7 @@
   },
   {
     "title": "Test",
-    "file": "",
+    "file": null,
     "desc": null,
     "link": [
       "https://github.com"
