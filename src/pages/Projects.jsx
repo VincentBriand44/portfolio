@@ -20,7 +20,7 @@ const Projects = () => {
   }, [projects])
 
   return (
-    <div
+    <section
       className='flex items-center justify-center w-full h-full snap-center'
       id='projects'
     >
@@ -83,7 +83,7 @@ const Projects = () => {
           <img src={`/src/assets/img/next.webp`} alt='Suivant' />
         </a>
       )}
-    </div>
+    </section>
   )
 }
 

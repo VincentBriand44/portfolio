@@ -1,7 +1,7 @@
 import { email, socials } from '../assets/json/config.json'
 
 const Contact = () => (
-  <div
+  <section
     className='flex flex-col items-center justify-center h-full page text-slate-800 snap-center'
     id='contact'
   >
@@ -17,7 +17,7 @@ const Contact = () => (
         <p>{social.title}</p>
       </a>
     ))}
-  </div>
+  </section>
 )
 
 export default Contact

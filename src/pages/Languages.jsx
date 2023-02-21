@@ -1,14 +1,14 @@
 import languages from '../assets/json/languages.json'
 
 const Languages = () => (
-  <div
+  <section
     className='flex items-center justify-center h-full pb-24 page lg:pb-40 snap-center'
     id='languages'
   >
     <div
-      className={`flex flex-wrap justify-center w-full p-8 ${
-        languages.length > 7 && 'overflow-x-scroll'
-      } sm:overflow-hidden sm:w-full sm:px-32 max-h-full flex-col gap-2 lg:gap-10 lg:flex-row gap-x-12 max-w-screen-2xl`}
+      className={`flex flex-wrap justify-center p-8 sm:overflow-hidden lg:w-full sm:px-32 max-h-full flex-col gap-2 lg:gap-10 lg:flex-row gap-x-12 max-w-screen-2xl ${
+        languages.length > 7 && 'overflow-x-scroll w-full'
+      }`}
     >
       {languages.map(
         ({ title, file, childs }, index) =>
@@ -59,7 +59,7 @@ const Languages = () => (
           )
       )}
     </div>
-  </div>
+  </section>
 )
 
 export default Languages

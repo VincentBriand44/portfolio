@@ -5,15 +5,15 @@ import Presentation from './pages/Presentation'
 import Projects from './pages/Projects'
 
 const App = () => (
-  <div className='text-gray-100 bg-gray-700'>
-    <main className='h-screen overflow-y-scroll pages scroll-smooth snap-y snap-mandatory'>
+  <>
+    <main className='h-screen overflow-y-scroll pages scroll-smooth snap-y snap-mandatory text-gray-100 bg-gray-700'>
       <Presentation />
       <Languages />
       <Projects />
       <Contact />
     </main>
     <Navbar />
-  </div>
+  </>
 )
 
 export default App
