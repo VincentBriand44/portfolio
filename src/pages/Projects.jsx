@@ -36,7 +36,7 @@ const Projects = () => {
             setPage(page === 1 ? Math.ceil(projects.length / 9) : page - 1)
           }
         >
-          <img src={previous} alt='Précédent' />
+          <img src={previous} alt='Précédent' draggable={false} />
         </a>
       )}
       <div className='relative flex items-center h-full max-w-5xl overflow-hidden scroll-smooth snap-x snap-mandatory snap-center'>
@@ -82,7 +82,7 @@ const Projects = () => {
             setPage(page === Math.ceil(projects.length / 9) ? 1 : page + 1)
           }
         >
-          <img src={next} alt='Suivant' />
+          <img src={next} alt='Suivant' draggable={false} />
         </a>
       )}
     </section>

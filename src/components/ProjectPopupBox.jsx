@@ -3,6 +3,8 @@ import noImage from '../assets/img/no-image.webp'
 const ProjectPopupBox = ({ popup, setImageOnly }) => {
   const { title, links, desc, file } = popup
 
+  const regex = new RegExp('github')
+
   return (
     <>
       <div className='flex items-center justify-center w-full h-1/3 md:h-full bg-slate-900 md:w-1/3'>

@@ -19,8 +19,6 @@ const ProjectPopup = ({ popup, setPopup, reset }) => {
     return () => setScrollable(true)
   }, [])
 
-  const regex = new RegExp('github')
-
   return (
     <div
       className='fixed inset-0 flex items-center justify-center w-full h-full p-4 bg-black/60'
