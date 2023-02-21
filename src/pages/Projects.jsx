@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
 
 import ProjectPopup from '../components/ProjectPopup'
-
-import projects from '../assets/json/projects.json'
 import ProjectsBox from '../components/ProjectsBox'
+
+import next from '../assets/img/next.webp'
+import previous from '../assets/img/previous.webp'
+import projects from '../assets/json/projects.json'
 
 const Projects = () => {
   const reset = { title: null, links: null, desc: null, file: null }
@@ -34,7 +36,7 @@ const Projects = () => {
             setPage(page === 1 ? Math.ceil(projects.length / 9) : page - 1)
           }
         >
-          <img src={`/src/assets/img/previous.webp`} alt='Précédent' />
+          <img src={previous} alt='Précédent' />
         </a>
       )}
       <div className='relative flex items-center h-full max-w-5xl overflow-hidden scroll-smooth snap-x snap-mandatory snap-center'>
@@ -80,7 +82,7 @@ const Projects = () => {
             setPage(page === Math.ceil(projects.length / 9) ? 1 : page + 1)
           }
         >
-          <img src={`/src/assets/img/next.webp`} alt='Suivant' />
+          <img src={next} alt='Suivant' />
         </a>
       )}
     </section>
