@@ -1,3 +1,5 @@
+import noImage from '../assets/img/no-image.webp'
+
 const ProjectsBox = ({ project, setPopup }) => {
   const { title, links, desc, file } = project
 
@@ -9,9 +11,9 @@ const ProjectsBox = ({ project, setPopup }) => {
       }`}
       style={{
         backgroundImage: file
-          ? `url(/src/assets/img/projects/${file})`
+          ? `url(/assets/img/projects/${file})`
           : title
-          ? 'url(/src/assets/img/no-image.webp)'
+          ? noImage
           : 'none'
       }}
       onClick={() =>

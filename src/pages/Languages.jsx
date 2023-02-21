@@ -1,3 +1,4 @@
+import noImage from '../assets/img/no-image.webp'
 import languages from '../assets/json/languages.json'
 
 const Languages = () => (
@@ -18,11 +19,7 @@ const Languages = () => (
                 <div className='flex justify-center items-center w-14 h-14 bg-black/[.3] rounded-full lg:w-28 lg:h-28 select-none'>
                   <img
                     className='w-8 h-8 lg:w-16 lg:h-16'
-                    src={
-                      file
-                        ? `/src/assets/img/languages/${file}`
-                        : '/src/assets/img/no-image.webp'
-                    }
+                    src={file ? `/assets/img/languages/${file}` : noImage}
                     draggable='false'
                     title={title}
                   />
@@ -45,7 +42,7 @@ const Languages = () => (
                     >
                       <div className='flex items-center justify-center w-8 h-8 text-center bg-white rounded-full select-none'>
                         <img
-                          src={`/src/assets/img/languages/${file}`}
+                          src={file ? `/assets/img/languages/${file}` : noImage}
                           className='w-6 h-6'
                           draggable='false'
                           title={title}

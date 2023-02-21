@@ -1,3 +1,5 @@
+import noImage from '../assets/img/no-image.webp'
+
 const PopupProjectImageOnly = ({ setImageOnly, popup }) => {
   const { file, title } = popup
 
@@ -5,11 +7,7 @@ const PopupProjectImageOnly = ({ setImageOnly, popup }) => {
     <div className='w-full h-full bg-slate-900'>
       <img
         className={`object-contain ${file ? 'w-full h-full' : 'w-16 h-16'}`}
-        src={
-          file
-            ? `/src/assets/img/projects/${file}`
-            : '/src/assets/img/no-image.webp'
-        }
+        src={file ? `/assets/img/projects/${file}` : noImage}
         alt={title}
         onClick={() => setImageOnly(false)}
       />

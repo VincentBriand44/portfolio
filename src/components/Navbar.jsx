@@ -2,10 +2,36 @@ import { useContext } from 'react'
 
 import ScrollContext from '../contexts/ScrollContext'
 
-import items from '../assets/json/navbar.json'
+import coding from '../assets/img/icons/coding.webp'
+import mail from '../assets/img/icons/mail.webp'
+import pencil from '../assets/img/icons/pencil.webp'
+import project from '../assets/img/icons/project.webp'
 
 const Footer = () => {
   const { scrollable } = useContext(ScrollContext)
+
+  const items = [
+    {
+      title: 'Présentation',
+      link: 'presentation',
+      icon: pencil
+    },
+    {
+      title: 'Languages',
+      link: 'languages',
+      icon: coding
+    },
+    {
+      title: 'Projets',
+      link: 'projects',
+      icon: project
+    },
+    {
+      title: 'Contact',
+      link: 'contact',
+      icon: mail
+    }
+  ]
 
   return (
     scrollable && (
@@ -19,7 +45,7 @@ const Footer = () => {
               >
                 <div className='mx-auto border rounded-full w-14 h-14 border-slate-900/[.5] bg-slate-600/[.3] hover:bg-slate-800/[.3]'>
                   <img
-                    src={`/src/assets/img/icons/${icon}.webp`}
+                    src={icon}
                     alt={title}
                     className='p-4'
                     draggable='false'
