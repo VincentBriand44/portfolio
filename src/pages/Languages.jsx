@@ -16,7 +16,7 @@ const Languages = () => (
           index < 14 && (
             <div key={title} className='flex items-center gap-2 lg:flex-col'>
               <div className='flex flex-col text-center'>
-                <div className='flex justify-center items-center w-14 h-14 bg-black/[.3] rounded-full lg:w-28 lg:h-28 select-none'>
+                <div className='flex justify-center items-center w-14 h-14 bg-black/[.3] rounded-full lg:w-28 lg:h-28 select-none hover:scale-110'>
                   <img
                     className='w-8 h-8 lg:w-16 lg:h-16'
                     src={file ?? noImage}
@@ -40,7 +40,7 @@ const Languages = () => (
                       className='flex flex-col items-center w-1/3'
                       style={{ marginTop }}
                     >
-                      <div className='flex items-center justify-center w-8 h-8 text-center bg-white rounded-full select-none'>
+                      <div className='flex items-center justify-center w-8 h-8 text-center bg-black/[.3] rounded-full select-none hover:scale-110'>
                         <img
                           src={file ?? noImage}
                           className='w-6 h-6'

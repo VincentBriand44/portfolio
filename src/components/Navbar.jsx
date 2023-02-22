@@ -38,7 +38,7 @@ const Footer = () => {
       <footer className='flex justify-center'>
         <div className='fixed grid w-screen max-w-2xl grid-cols-4 text-xs pointer-events-none select-none bottom-4 nav:text-base nav:bottom-12'>
           {items.map(({ title, link, icon }) => (
-            <div className='text-center' key={title}>
+            <div className='text-center text-gray-100' key={title}>
               <a
                 href={`#${link}`}
                 className='flex flex-col pointer-events-auto hover:animate-pulse active:animate-bounce nav-custom'
