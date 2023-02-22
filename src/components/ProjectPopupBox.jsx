@@ -16,11 +16,11 @@ const ProjectPopupBox = ({ popup, setImageOnly }) => {
         />
       </div>
       <div className='flex flex-col items-center justify-between w-full h-full p-4 md:w-2/3'>
-        <div className='w-full'>
-          <h2 className='font-bold'>{title}</h2>
-          <p>{desc}</p>
+        <div className='w-full contents'>
+          <h2 className='text-2xl font-bold'>{title}</h2>
+          {desc && <p className='h-full p-4 overflow-y-scroll'>{desc}</p>}
         </div>
-        <div className='flex gap-4 justify-content'>
+        <div className='flex justify-center w-full gap-4 mt-4'>
           {links?.map(link => (
             <a href={link} target='_blank' key={link}>
               <button className='px-8 py-2 rounded-md bg-slate-900 hover:ring-2 ring-inset'>
