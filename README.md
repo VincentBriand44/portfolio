@@ -23,6 +23,10 @@ To deploy this project run
 
 ```bash
   yarn run build
+  #or
+  npm run build
+  #or
+  pnpm run build
 ```
 
 ## Tech Stack
