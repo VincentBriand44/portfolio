@@ -1,53 +1,53 @@
 [
   {
     "title": "HTML",
-    "file": "html.webp",
+    "file": "/assets/img/languages/html.webp",
     "childs": []
   },
   {
     "title": "CSS",
-    "file": "css.webp",
+    "file": "/assets/img/languages/css.webp",
     "childs": [
       {
         "title": "Tailwind CSS",
-        "file": "tailwind.webp"
+        "file": "/assets/img/languages/tailwind.webp"
       },
       {
         "title": "SASS/SCSS",
-        "file": "sass.webp"
+        "file": "/assets/img/languages/sass.webp"
       },
       {
         "title": "Bootstrap",
-        "file": "bootstrap.webp"
+        "file": "/assets/img/languages/bootstrap.webp"
       }
     ]
   },
   {
     "title": "JavaScript",
-    "file": "js.webp",
+    "file": "/assets/img/languages/js.webp",
     "childs": [
       {
         "title": "ReactJS",
-        "file": "react.webp"
+        "file": "/assets/img/languages/react.webp"
       },
       {
         "title": "NodeJS",
-        "file": "node.webp"
+        "file": "/assets/img/languages/node.webp"
       },
       {
         "title": "ExpressJS",
-        "file": "express.webp"
+        "file": "/assets/img/languages/express.webp"
       }
     ]
   },
   {
     "title": "PHP",
-    "file": "php.webp",
+    "file": "/assets/img/languages/php.webp",
     "childs": []
   },
   {
     "title": "SQL",
-    "file": "sql.webp",
+    "file": "/assets/img/languages/sql.webp",
     "childs": []
   }
 ]

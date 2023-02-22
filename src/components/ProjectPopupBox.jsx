@@ -10,7 +10,7 @@ const ProjectPopupBox = ({ popup, setImageOnly }) => {
       <div className='flex items-center justify-center w-full h-1/3 md:h-full bg-slate-900 md:w-1/3'>
         <img
           className={`object-contain ${file ? 'w-full h-full' : 'w-16 h-16'}`}
-          src={file ? `/assets/img/projects/${file}` : noImage}
+          src={file ?? noImage}
           alt={title}
           onClick={() => file && setImageOnly(true)}
         />
