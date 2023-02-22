@@ -5,3 +5,22 @@
 main::-webkit-scrollbar {
   display: none;
 }
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(15 23 42) rgb(21, 31, 48);
+}
+
+*::-webkit-scrollbar {
+  width: .5rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(21, 31, 48);
+  border-radius: .5rem;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(15 23 42);
+  border-radius: .5rem;
+}
