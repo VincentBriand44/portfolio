@@ -18,7 +18,9 @@ const ProjectPopupBox = ({ popup, setImageOnly }) => {
       <div className='flex flex-col items-center justify-between w-full h-full p-4 md:w-2/3'>
         <div className='w-full contents'>
           <h2 className='text-2xl font-bold'>{title}</h2>
-          {desc && <p className='h-full p-4 overflow-y-scroll'>{desc}</p>}
+          {desc && (
+            <p className='w-full h-full p-4 overflow-y-scroll'>{desc}</p>
+          )}
         </div>
         <div className='flex justify-center w-full gap-4 mt-4'>
           {links?.map(link => (
