@@ -6,6 +6,7 @@ import ProjectsBox from '../components/ProjectsBox'
 
 import projects from '../assets/json/projects.json'
 import ProjectIcon from '../components/ProjectIcon'
+import ProjectNav from '../components/ProjectNav'
 
 const Projects = () => {
   const reset = { title: null, links: null, desc: null, file: null }
@@ -22,46 +23,53 @@ const Projects = () => {
 
   return (
     <section
-      className='flex items-center justify-center h-full page snap-center'
+      className='flex flex-col justify-center h-full page snap-center'
       id='projects'
     >
       {projects.length > 0 ? (
         <>
-          {projects.length > 9 && <ProjectIcon icon='previous' />}
-          <div className='relative flex items-center h-full max-w-5xl overflow-hidden scroll-smooth snap-x snap-mandatory snap-center'>
-            {projects.map(
-              (_, i) =>
-                i % 9 === 0 && (
-                  <div
-                    className='flex justify-center min-w-full origin-center'
-                    id={`projects__${i / 9 + 1}`}
-                    key={i}
-                  >
-                    <div className='grid grid-cols-2 gap-2 origin-center scale-100 justify-items-center lg:gap-10 lg:grid-cols-3'>
-                      {projects.map(
-                        (project, index) =>
-                          index >= i &&
-                          index <= i + 8 && (
-                            <ProjectsBox
-                              project={project}
-                              setPopup={setPopup}
-                              key={index}
-                            />
-                          )
-                      )}
-                      {i === projects.length + empty.length - 9 &&
-                        empty.map((_, index) => (
-                          <ProjectsBox project={reset} key={index} />
-                        ))}
+          <div className='flex items-center justify-center'>
+            <ProjectIcon icon='previous' />
+
+            <div className='relative flex items-center h-full max-w-5xl overflow-hidden scroll-smooth snap-x snap-mandatory snap-center'>
+              {projects.map(
+                (_, i) =>
+                  i % 9 === 0 && (
+                    <div
+                      className='flex justify-center min-w-full origin-center'
+                      id={`projects__${i / 9 + 1}`}
+                      key={i}
+                    >
+                      <div className='grid grid-cols-2 gap-2 origin-center scale-100 justify-items-center lg:gap-10 lg:grid-cols-3'>
+                        {projects.map(
+                          (project, index) =>
+                            index >= i &&
+                            index <= i + 8 && (
+                              <ProjectsBox
+                                project={project}
+                                setPopup={setPopup}
+                                key={index}
+                              />
+                            )
+                        )}
+                        {i === projects.length + empty.length - 9 &&
+                          empty.map((_, index) => (
+                            <ProjectsBox project={reset} key={index} />
+                          ))}
+                      </div>
                     </div>
-                  </div>
-                )
+                  )
+              )}
+            </div>
+
+            <ProjectIcon icon='next' />
+
+            {popup?.title && (
+              <ProjectPopup popup={popup} setPopup={setPopup} reset={reset} />
             )}
           </div>
-          {popup?.title && (
-            <ProjectPopup popup={popup} setPopup={setPopup} reset={reset} />
-          )}
-          {projects.length > 9 && <ProjectIcon icon='next' />}
+
+          <ProjectNav />
         </>
       ) : (
         <PageEmpty text="Aucun projet n'a été trouvé" />
