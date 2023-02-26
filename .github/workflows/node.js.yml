@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
   pull_request:
-    branches: [ "main" ]
+    branches: ['main']
 
 jobs:
   build:
@@ -19,21 +19,21 @@ jobs:
         node-version: [14.x, 16.x, 18.x]
 
     steps:
-    - name: Git checkout
-      uses: actions/checkout@v3
-    
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    
-    - name: Install
-      run: npm install
-      
-    - name: Build
-      run: npm run build --if-present
-      
+      - name: Git checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install
+        run: npm install
+
+      - name: Build
+        run: npm run build --if-present
+
   build-and-deploy:
     name: Deploy App
     runs-on: ubuntu-latest
@@ -43,7 +43,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          npm ci
+          npm install
           npm run build
 
       - name: Deploy 🚀
