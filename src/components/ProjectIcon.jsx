@@ -1,19 +1,9 @@
-import { useState } from 'react'
-
 import next from '../assets/img/next.webp'
 import previous from '../assets/img/previous.webp'
 import projects from '../assets/json/projects.json'
 
-const ProjectIcon = ({ icon }) => {
-  const [page, setPage] = useState(
-    window.location.hash.split('__')[1] <= Math.ceil(projects.length / 9) &&
-      window.location.hash.split('__')[1] > 0
-      ? window.location.hash.split('__')[1]
-      : 1
-  )
-  console.log(page)
-
-  return projects.length > 9 && icon === 'previous' ? (
+const ProjectIcon = ({ icon, page, setPage }) =>
+  projects.length > 9 && icon === 'previous' ? (
     <a
       href={`#projects__${page <= 0 ? Math.ceil(projects.length / 9) : page}`}
       title='Précédent'
@@ -36,6 +26,5 @@ const ProjectIcon = ({ icon }) => {
       </a>
     )
   )
-}
 
 export default ProjectIcon
