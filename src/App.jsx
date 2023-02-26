@@ -7,7 +7,10 @@ import Projects from './pages/Projects'
 
 const App = () => {
   useEffect(() => {
-    window.location.hash !== '' && (window.location.href = window.location.hash)
+    setTimeout(() => {
+      window.location.hash !== '' &&
+        (window.location.href = window.location.hash)
+    }, 500)
   }, [])
 
   return (
