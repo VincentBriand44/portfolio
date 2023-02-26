@@ -18,9 +18,6 @@ const Projects = () => {
       ? parseInt(window.location.hash.split('__')[1])
       : 1
   )
-  console.log(page)
-  // bug: miss change page when click on icon (ex: 1 -> 2 <- 1)
-  // bug: start to projects__2 when refresh page
 
   return (
     <section
