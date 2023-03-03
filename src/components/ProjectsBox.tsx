@@ -1,6 +1,18 @@
+import { Dispatch, FunctionComponent, SetStateAction } from 'react'
 import noImage from '../assets/img/no-image.webp'
 
-const ProjectsBox = ({ project, setPopup }) => {
+type Project = {
+  title: string | null
+  desc: string | null
+  file: string | null
+  links: string[] | never[]
+}
+type Props = {
+  project: Project
+  setPopup: Dispatch<SetStateAction<Project>>
+}
+
+const ProjectsBox: FunctionComponent<Props> = ({ project, setPopup }) => {
   const { title, links, desc, file } = project
 
   return (
@@ -10,9 +22,11 @@ const ProjectsBox = ({ project, setPopup }) => {
         file ? 'bg-cover' : 'bg-32'
       }`}
       style={
-        title && {
-          backgroundImage: `url(${file ?? noImage})`
-        }
+        title
+          ? {
+              backgroundImage: `url(${file ?? noImage})`
+            }
+          : {}
       }
       onClick={() =>
         title &&

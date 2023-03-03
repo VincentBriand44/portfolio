@@ -10,7 +10,7 @@ import {
 const Presentation = () => {
   const getAge = () => {
     let age = new Date(Date.now() - new Date(birthdate).getTime())
-    return Math.abs(age.getUTCFullYear() - 1970)
+    return Math.abs(age.getUTCFullYear() - 1970).toString()
   }
   return (
     <section

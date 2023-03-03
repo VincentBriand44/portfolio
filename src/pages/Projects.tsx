@@ -1,20 +1,28 @@
 import { useState } from 'react'
 
-import PageEmpty from '../components/PageEmpty'
-import ProjectPopup from '../components/ProjectPopup'
-
 import projects from '../assets/json/projects.json'
+
+import PageEmpty from '../components/PageEmpty'
 import ProjectContainer from '../components/ProjectContainer'
 import ProjectIcon from '../components/ProjectIcon'
 import ProjectNav from '../components/ProjectNav'
+import ProjectPopup from '../components/ProjectPopup'
+
+type Project = {
+  title: string | null
+  desc: string | null
+  file: string | null
+  links: string[] | never[]
+}
 
 const Projects = () => {
-  const reset = { title: null, links: null, desc: null, file: null }
-  const [popup, setPopup] = useState(reset)
+  const reset: Project = { title: null, links: [], desc: null, file: null }
+  const [popup, setPopup] = useState<Project>(reset)
 
   const [page, setPage] = useState(
-    window.location.hash.split('__')[1] <= Math.ceil(projects.length / 9) &&
-      window.location.hash.split('__')[1] > 0
+    parseInt(window.location.hash.split('__')[1]) <=
+      Math.ceil(projects.length / 9) &&
+      parseInt(window.location.hash.split('__')[1]) > 0
       ? parseInt(window.location.hash.split('__')[1])
       : 1
   )

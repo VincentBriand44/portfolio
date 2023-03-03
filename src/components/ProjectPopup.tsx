@@ -1,10 +1,29 @@
-import { useContext, useEffect, useState } from 'react'
+import {
+  Dispatch,
+  FunctionComponent,
+  SetStateAction,
+  useContext,
+  useEffect,
+  useState
+} from 'react'
 
 import ScrollContext from '../contexts/ScrollContext'
 import ProjectPopupBox from './ProjectPopupBox'
 import ProjectPopupImageOnly from './ProjectPopupImageOnly'
 
-const ProjectPopup = ({ popup, setPopup, reset }) => {
+type Project = {
+  title: string | null
+  desc: string | null
+  file: string | null
+  links: string[] | never[]
+}
+type Props = {
+  popup: Project
+  setPopup: Dispatch<SetStateAction<Project>>
+  reset: Project
+}
+
+const ProjectPopup: FunctionComponent<Props> = ({ popup, setPopup, reset }) => {
   const { setScrollable } = useContext(ScrollContext)
 
   const [imageOnly, setImageOnly] = useState(false)

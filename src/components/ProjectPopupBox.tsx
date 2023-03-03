@@ -1,6 +1,19 @@
+import { Dispatch, FunctionComponent, SetStateAction } from 'react'
 import noImage from '../assets/img/no-image.webp'
 
-const ProjectPopupBox = ({ popup, setImageOnly }) => {
+type Project = {
+  title: string | null
+  desc: string | null
+  file: string | null
+  links: string[] | never[]
+}
+
+type Props = {
+  popup: Project
+  setImageOnly: Dispatch<SetStateAction<boolean>>
+}
+
+const ProjectPopupBox: FunctionComponent<Props> = ({ popup, setImageOnly }) => {
   const { title, links, desc, file } = popup
 
   const regex = new RegExp('github')
@@ -11,7 +24,7 @@ const ProjectPopupBox = ({ popup, setImageOnly }) => {
         <img
           className={`object-contain ${file ? 'w-full h-full' : 'w-16 h-16'}`}
           src={file ?? noImage}
-          alt={title}
+          alt={title ?? 'no title'}
           onClick={() => file && setImageOnly(true)}
         />
       </div>
@@ -24,7 +37,7 @@ const ProjectPopupBox = ({ popup, setImageOnly }) => {
         </div>
         <div className='flex justify-center w-full gap-4 mt-4'>
           {links?.map(link => (
-            <a href={link} target='_blank' key={link}>
+            <a href={link} target='_blank' key={title}>
               <button className='px-8 py-2 rounded-md bg-slate-900 hover:ring-2 ring-inset'>
                 {regex.test(link) ? 'Accèder au Github' : 'Vister le site'}
               </button>

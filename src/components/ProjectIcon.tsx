@@ -1,8 +1,19 @@
+import { Dispatch, FunctionComponent, SetStateAction } from 'react'
 import next from '../assets/img/next.webp'
 import previous from '../assets/img/previous.webp'
 import projects from '../assets/json/projects.json'
 
-const ProjectIcon = ({ icon, page, setPage }) =>
+type Props = {
+  icon: 'previous' | 'next'
+  page: number
+  setPage: Dispatch<SetStateAction<number>>
+}
+
+const ProjectIcon: FunctionComponent<Props> = ({
+  icon,
+  page,
+  setPage
+}): any => {
   projects.length > 9 && icon === 'previous' ? (
     <a
       href={`#projects__${page <= 0 ? Math.ceil(projects.length / 9) : page}`}
@@ -26,5 +37,6 @@ const ProjectIcon = ({ icon, page, setPage }) =>
       </a>
     )
   )
+}
 
 export default ProjectIcon

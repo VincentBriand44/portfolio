@@ -1,8 +1,19 @@
-import { useEffect, useState } from 'react'
+import {
+  Dispatch,
+  FunctionComponent,
+  SetStateAction,
+  useEffect,
+  useState
+} from 'react'
 import projects from '../assets/json/projects.json'
 
-const ProjectNav = ({ page, setPage }) => {
-  const [pages, setPages] = useState([])
+type Props = {
+  page: number
+  setPage: Dispatch<SetStateAction<number>>
+}
+
+const ProjectNav: FunctionComponent<Props> = ({ page, setPage }): any => {
+  const [pages, setPages] = useState<string[]>([])
 
   useEffect(() => {
     let array = []

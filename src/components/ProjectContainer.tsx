@@ -1,14 +1,36 @@
-import { useEffect, useState } from 'react'
+import {
+  Dispatch,
+  FunctionComponent,
+  SetStateAction,
+  useEffect,
+  useState
+} from 'react'
 
 import ProjectsBox from './ProjectsBox'
 
 import projects from '../assets/json/projects.json'
 
-const ProjectContainer = ({ i, setPopup, reset }) => {
-  const [empty, setEmpty] = useState([])
+type Project = {
+  title: string | null
+  desc: string | null
+  file: string | null
+  links: string[] | never[]
+}
+type Props = {
+  i: number
+  setPopup: Dispatch<SetStateAction<Project>>
+  reset: Project
+}
+
+const ProjectContainer: FunctionComponent<Props> = ({
+  i,
+  setPopup,
+  reset
+}): any => {
+  const [empty, setEmpty] = useState<string[]>([])
 
   useEffect(() => {
-    let array = []
+    let array: string[] = []
     for (let i = 0; i < 9 - (projects.length % 9); i++) {
       array.push('')
     }
@@ -36,7 +58,7 @@ const ProjectContainer = ({ i, setPopup, reset }) => {
           )}
           {i === projects.length + empty.length - 9 &&
             empty.map((_, index) => (
-              <ProjectsBox project={reset} key={index} />
+              <ProjectsBox project={reset} setPopup={setPopup} key={index} />
             ))}
         </div>
       </div>
