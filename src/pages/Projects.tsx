@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import projects from '../assets/json/projects.json'
 
@@ -18,14 +18,11 @@ type Project = {
 const Projects = () => {
   const reset: Project = { title: null, links: [], desc: null, file: null }
   const [popup, setPopup] = useState<Project>(reset)
-
-  const [page, setPage] = useState(
-    parseInt(window.location.hash.split('__')[1]) <=
-      Math.ceil(projects.length / 9) &&
-      parseInt(window.location.hash.split('__')[1]) > 0
-      ? parseInt(window.location.hash.split('__')[1])
-      : 1
-  )
+  const [page, setPage] = useState(1)
+  useEffect(() => {
+    const hash: number | undefined = Number(window.location.hash.split('__')[1])
+    setPage(hash <= Math.ceil(projects.length / 9) && hash > 0 ? hash : 1)
+  }, [])
 
   return (
     <section
