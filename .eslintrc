@@ -6,6 +6,9 @@
     "prettier",
     "import"
   ],
+  "extends": [
+    "plugin:react/jsx-runtime"
+  ],
   "rules": {
     "prettier/prettier": "error",
     "import/order": [

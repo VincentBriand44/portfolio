@@ -22,7 +22,8 @@
     "noUncheckedIndexedAccess": true
   },
   "include": [
-    "src"
+    "**/*.ts",
+    "**/*.tsx"
   ],
   "references": [
     {

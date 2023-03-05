@@ -14,7 +14,9 @@ type Props = PropsWithChildren<{
 
 const ScrollContext = createContext({} as Props)
 
-const ScrollContextProvider: FunctionComponent<Props> = ({ children }) => {
+const ScrollContextProvider: FunctionComponent<PropsWithChildren> = ({
+  children,
+}) => {
   const [scrollable, setScrollable] = useState(true)
 
   return (

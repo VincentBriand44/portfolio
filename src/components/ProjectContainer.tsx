@@ -1,10 +1,4 @@
-import {
-  Dispatch,
-  FunctionComponent,
-  SetStateAction,
-  useEffect,
-  useState,
-} from 'react'
+import { Dispatch, FunctionComponent, SetStateAction, useState } from 'react'
 
 import projects from '../assets/json/projects.json'
 import { Project } from '../pages/Projects'
@@ -18,15 +12,9 @@ interface Props {
 }
 
 const ProjectContainer: FunctionComponent<Props> = ({ i, setPopup, reset }) => {
-  const [empty, setEmpty] = useState<string[]>([])
-
-  useEffect(() => {
-    let array: string[] = []
-    for (let i = 0; i < 9 - (projects.length % 9); i++) {
-      array.push('')
-    }
-    setEmpty(array)
-  }, [projects])
+  const [empty, setEmpty] = useState(
+    Array.from({ length: 9 - (projects.length % 9) }).fill('') as string[]
+  )
 
   return i % 9 === 0 ? (
     <div

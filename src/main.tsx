@@ -6,7 +6,7 @@ import { ScrollContextProvider } from './contexts/ScrollContext'
 
 import './assets/css/index.css'
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('root') as HTMLElement).render(
   <StrictMode>
     <ScrollContextProvider>
       <App />
