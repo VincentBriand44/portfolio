@@ -8,13 +8,13 @@
   "socials": [
     {
       "title": "GitHub",
-      "icon": null,
+      "icon": "",
       "name": "VincentBriand44",
       "link": "https://github.com/VincentBriand44"
     },
     {
       "title": "Linkedin",
-      "icon": null,
+      "icon": "",
       "name": "vincent.briand44",
       "link": "https://www.linkedin.com/in/vincent-briand44"
     }
