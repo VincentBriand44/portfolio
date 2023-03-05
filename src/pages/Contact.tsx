@@ -2,8 +2,8 @@ import { email, socials } from '../assets/json/config.json'
 
 const Contact = () => (
   <section
-    className='flex flex-col items-center justify-center h-full page snap-center'
-    id='contact'
+    className="flex flex-col items-center justify-center h-full page snap-center"
+    id="contact"
   >
     {email && (
       <p>
@@ -13,7 +13,7 @@ const Contact = () => (
 
     {socials.map((social, index) => (
       <a href={social.link} key={index}>
-        <img src={social.icon} alt='' />
+        <img src={social.icon} alt="" />
         <p>{social.title}</p>
       </a>
     ))}

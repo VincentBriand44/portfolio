@@ -3,16 +3,17 @@ import {
   FunctionComponent,
   SetStateAction,
   useEffect,
-  useState
+  useState,
 } from 'react'
+
 import projects from '../assets/json/projects.json'
 
-type Props = {
+interface Props {
   page: number
   setPage: Dispatch<SetStateAction<number>>
 }
 
-const ProjectNav: FunctionComponent<Props> = ({ page, setPage }): any => {
+const ProjectNav: FunctionComponent<Props> = ({ page, setPage }) => {
   const [pages, setPages] = useState<string[]>([])
 
   useEffect(() => {
@@ -23,23 +24,21 @@ const ProjectNav: FunctionComponent<Props> = ({ page, setPage }): any => {
     setPages(array)
   }, [projects])
 
-  return (
-    projects.length > 9 && (
-      <div className='flex justify-center w-full gap-2 mt-2'>
-        {projects.length > 0 &&
-          pages.map((_, index) => (
-            <a
-              href={`#projects__${index + 1}`}
-              key={index}
-              className={`w-4 h-4 rounded-full cursor-pointer bg-slate-800 hover:bg-slate-900 transition-all ${
-                page === index + 1 && 'bg-slate-900 w-8'
-              }`}
-              onClick={() => setPage(index + 1)}
-            ></a>
-          ))}
-      </div>
-    )
-  )
+  return projects.length > 9 ? (
+    <div className="flex justify-center w-full gap-2 mt-2">
+      {projects.length > 0 &&
+        pages.map((_, index) => (
+          <a
+            href={`#projects__${index + 1}`}
+            key={index}
+            className={`w-4 h-4 rounded-full cursor-pointer bg-slate-800 hover:bg-slate-900 transition-all ${
+              page === index + 1 && 'bg-slate-900 w-8'
+            }`}
+            onClick={() => setPage(index + 1)}
+          ></a>
+        ))}
+    </div>
+  ) : null
 }
 
 export default ProjectNav

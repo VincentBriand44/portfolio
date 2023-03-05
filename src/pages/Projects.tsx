@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react'
 
 import projects from '../assets/json/projects.json'
-
 import PageEmpty from '../components/PageEmpty'
 import ProjectContainer from '../components/ProjectContainer'
 import ProjectIcon from '../components/ProjectIcon'
 import ProjectNav from '../components/ProjectNav'
 import ProjectPopup from '../components/ProjectPopup'
 
-type Project = {
+export interface Project {
   title: string | null
   desc: string | null
   file: string | null
@@ -26,15 +25,15 @@ const Projects = () => {
 
   return (
     <section
-      className='flex flex-col justify-center h-full page snap-center'
-      id='projects'
+      className="flex flex-col justify-center h-full page snap-center"
+      id="projects"
     >
       {projects.length > 0 ? (
         <>
-          <div className='flex items-center justify-center'>
-            <ProjectIcon icon='previous' page={page} setPage={setPage} />
+          <div className="flex items-center justify-center">
+            <ProjectIcon icon="previous" page={page} setPage={setPage} />
 
-            <div className='relative flex items-center h-full max-w-5xl overflow-hidden scroll-smooth snap-x snap-mandatory snap-center'>
+            <div className="relative flex items-center h-full max-w-5xl overflow-hidden scroll-smooth snap-x snap-mandatory snap-center">
               {projects.map((_, i) => (
                 <ProjectContainer
                   i={i}
@@ -45,7 +44,7 @@ const Projects = () => {
               ))}
             </div>
 
-            <ProjectIcon icon='next' page={page} setPage={setPage} />
+            <ProjectIcon icon="next" page={page} setPage={setPage} />
 
             {popup?.title && (
               <ProjectPopup popup={popup} setPopup={setPopup} reset={reset} />

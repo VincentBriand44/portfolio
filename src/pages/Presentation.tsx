@@ -4,7 +4,7 @@ import {
   birthdate,
   description,
   fullname,
-  image
+  image,
 } from '../assets/json/config.json'
 
 const Presentation = () => {
@@ -16,7 +16,7 @@ const Presentation = () => {
     <section
       className={`flex flex-col items-center justify-center h-full bg-center bg-cover pb-24 md:pb-40 page snap-center`}
       style={{ backgroundImage: `url(${background})` }}
-      id='presentation'
+      id="presentation"
     >
       <img
         src={image ?? noImage}
@@ -24,10 +24,10 @@ const Presentation = () => {
         className={`object-cover w-40 h-40 mx-auto my-5 rounded-full bg-slate-900 ${
           !image && 'p-8'
         }`}
-        draggable='false'
+        draggable="false"
       />
-      <h1 className='text-3xl font-bold'>{fullname}</h1>
-      <p className='max-w-4xl mx-4 mt-10 text-center'>
+      <h1 className="text-3xl font-bold">{fullname}</h1>
+      <p className="max-w-4xl mx-4 mt-10 text-center">
         {description.replace('{age}', getAge())}
       </p>
     </section>

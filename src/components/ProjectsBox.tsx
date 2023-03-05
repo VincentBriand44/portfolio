@@ -1,13 +1,9 @@
 import { Dispatch, FunctionComponent, SetStateAction } from 'react'
-import noImage from '../assets/img/no-image.webp'
 
-type Project = {
-  title: string | null
-  desc: string | null
-  file: string | null
-  links: string[] | never[]
-}
-type Props = {
+import noImage from '../assets/img/no-image.webp'
+import { Project } from '../pages/Projects'
+
+interface Props {
   project: Project
   setPopup: Dispatch<SetStateAction<Project>>
 }
@@ -24,7 +20,7 @@ const ProjectsBox: FunctionComponent<Props> = ({ project, setPopup }) => {
       style={
         title
           ? {
-              backgroundImage: `url(${file ?? noImage})`
+              backgroundImage: `url(${file ?? noImage})`,
             }
           : {}
       }
@@ -34,11 +30,11 @@ const ProjectsBox: FunctionComponent<Props> = ({ project, setPopup }) => {
           title: title,
           links: links,
           desc: desc,
-          file: file
+          file: file,
         })
       }
     >
-      <div className='bg-black/[.3] hover:bg-black/[.1] w-full flex h-full p-2 items-center justify-center rounded-lg'>
+      <div className="bg-black/[.3] hover:bg-black/[.1] w-full flex h-full p-2 items-center justify-center rounded-lg">
         <p>{title}</p>
       </div>
     </div>
