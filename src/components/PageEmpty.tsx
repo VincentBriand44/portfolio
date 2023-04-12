@@ -1,12 +1,8 @@
-import { FunctionComponent } from 'react'
+import { FunctionComponent, PropsWithChildren } from 'react'
 
-interface Props {
-  text: string
-}
-
-const PageEmpty: FunctionComponent<Props> = ({ text }) => (
+const PageEmpty: FunctionComponent<PropsWithChildren> = ({ children }) => (
   <div className="flex flex-col items-center justify-center w-full h-full">
-    <h2 className="text-xl font-bold text-center text-white">{text}</h2>
+    <h2 className="text-xl font-bold text-center text-white">{children}</h2>
   </div>
 )
 

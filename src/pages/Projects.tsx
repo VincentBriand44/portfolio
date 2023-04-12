@@ -54,7 +54,7 @@ const Projects = () => {
           <ProjectNav page={page} setPage={setPage} />
         </>
       ) : (
-        <PageEmpty text="Aucun projet n'a été trouvé" />
+        <PageEmpty>Aucun projet n'a été trouvé</PageEmpty>
       )}
     </section>
   )

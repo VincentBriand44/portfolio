@@ -13,23 +13,23 @@ const Footer = () => {
     {
       title: 'Présentation',
       link: 'presentation',
-      icon: pencil,
+      icon: pencil
     },
     {
       title: 'Languages',
       link: 'languages',
-      icon: coding,
+      icon: coding
     },
     {
       title: 'Projets',
       link: 'projects',
-      icon: project,
+      icon: project
     },
     {
       title: 'Contact',
       link: 'contact',
-      icon: mail,
-    },
+      icon: mail
+    }
   ]
 
   return scrollable ? (

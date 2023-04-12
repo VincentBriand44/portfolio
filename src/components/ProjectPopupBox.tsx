@@ -32,7 +32,7 @@ const ProjectPopupBox: FunctionComponent<Props> = ({ popup, setImageOnly }) => {
         </div>
         <div className="flex justify-center w-full gap-4 mt-4">
           {links?.map((link) => (
-            <a href={link} target="_blank" key={title}>
+            <a href={link} target="_blank" key={link}>
               <button className="px-8 py-2 rounded-md bg-slate-900 hover:ring-2 ring-inset">
                 {regex.test(link) ? 'Accèder au Github' : 'Vister le site'}
               </button>

@@ -20,7 +20,7 @@ const ProjectsBox: FunctionComponent<Props> = ({ project, setPopup }) => {
       style={
         title
           ? {
-              backgroundImage: `url(${file ?? noImage})`,
+              backgroundImage: `url(${file ?? noImage})`
             }
           : {}
       }
@@ -30,7 +30,7 @@ const ProjectsBox: FunctionComponent<Props> = ({ project, setPopup }) => {
           title: title,
           links: links,
           desc: desc,
-          file: file,
+          file: file
         })
       }
     >

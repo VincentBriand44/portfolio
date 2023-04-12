@@ -59,7 +59,7 @@ const Languages = () => (
         )}
       </div>
     ) : (
-      <PageEmpty text="Aucune compétence n'a été ajoutée" />
+      <PageEmpty>Aucune compétence n'a été ajoutée</PageEmpty>
     )}
   </section>
 )

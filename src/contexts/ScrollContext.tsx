@@ -4,7 +4,7 @@ import {
   PropsWithChildren,
   SetStateAction,
   createContext,
-  useState,
+  useState
 } from 'react'
 
 type Props = PropsWithChildren<{
@@ -15,7 +15,7 @@ type Props = PropsWithChildren<{
 const ScrollContext = createContext({} as Props)
 
 const ScrollContextProvider: FunctionComponent<PropsWithChildren> = ({
-  children,
+  children
 }) => {
   const [scrollable, setScrollable] = useState(true)
 
@@ -23,7 +23,7 @@ const ScrollContextProvider: FunctionComponent<PropsWithChildren> = ({
     <ScrollContext.Provider
       value={{
         scrollable,
-        setScrollable,
+        setScrollable
       }}
     >
       {children}

@@ -3,7 +3,7 @@ import {
   FunctionComponent,
   SetStateAction,
   useEffect,
-  useState,
+  useState
 } from 'react'
 
 import projects from '../assets/json/projects.json'
