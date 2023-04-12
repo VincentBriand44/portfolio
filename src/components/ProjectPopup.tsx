@@ -4,7 +4,7 @@ import {
   SetStateAction,
   useContext,
   useEffect,
-  useState,
+  useState
 } from 'react'
 
 import ScrollContext from '../contexts/ScrollContext'

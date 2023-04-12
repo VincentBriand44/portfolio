@@ -2,5 +2,6 @@
   "semi": false,
   "tabWidth": 2,
   "singleQuote": true,
-  "prettier.useTabs": false
+  "useTabs": false,
+  "trailingComma": "none"
 }

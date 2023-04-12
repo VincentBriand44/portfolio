@@ -10,7 +10,7 @@ interface Props {
 
 const PopupProjectImageOnly: FunctionComponent<Props> = ({
   setImageOnly,
-  popup,
+  popup
 }) => {
   const { file, title } = popup
 
