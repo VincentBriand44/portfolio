@@ -14,7 +14,7 @@ const Presentation = () => {
   }
   return (
     <section
-      className={`flex flex-col items-center justify-center h-full bg-center bg-cover pb-24 md:pb-40 page snap-center`}
+      className="flex flex-col items-center justify-center h-full bg-center bg-cover pb-24 md:pb-40 page snap-center backdrop-brightness-50"
       style={{ backgroundImage: `url(${background})` }}
       id="presentation"
     >
