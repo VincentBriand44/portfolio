@@ -9,45 +9,56 @@
     "title": "Sacrificial Reptilian Corporation",
     "file": "/assets/img/projects/src.webp",
     "desc": "Hackathon sur 72h: Thèmes sur les cultes",
-    "links": []
+    "links": [
+      "https://github.com/VincentBriand44/hackathon-3"
+    ]
   },
   {
     "title": "Uber calèche",
     "file": "/assets/img/projects/ubercaleche.webp",
     "desc": "Hackathon sur 30h: Application de déplacement en calèche inspirée de Uber",
-    "links": []
+    "links": [
+      "https://github.com/letotor/uber-caleche-react"
+    ]
   },
   {
     "title": "Le déclin des âmes",
     "file": "/assets/img/projects/ledeclindesames.webp",
     "desc": "Jeu inspiré du livre: 'Le livre dont vous êtes le héro'",
-    "links": []
+    "links": [
+      "https://github.com/WildCodeSchool/05-22-lordofpings-p2-g1"
+    ]
   },
   {
     "title": "Star Love",
     "file": "/assets/img/projects/starlove.webp",
     "desc": "Hackathon sur 30h: Site de rencontre sur l'univers de Star Wars",
-    "links": []
+    "links": [
+      "https://github.com/VincentBriand44/WCS-Hackathon-1"
+    ]
   },
   {
     "title": "Lord Of Pings",
     "file": "/assets/img/projects/lordofpings.webp",
     "desc": "Site de ma promotion à la Wild Code School",
-    "links": []
+    "links": [
+      "https://github.com/MoreauJonas/LordOfPing"
+    ]
   },
   {
     "title": "Portefolio",
     "file": null,
-    "desc": null,
-    "links": []
+    "desc": "Portefolio en ligne, pour présenter mes projets, mes compétences et mes expériences.",
+    "links": [
+      "https://github.com/VincentBriand44/portfolio"
+    ]
   },
   {
     "title": "Site vitrine - Flash-Host",
     "file": "/assets/img/projects/flashhost.webp",
     "desc": "Concevoir un site vitrine plus esthétique pour attirer plus de clients.",
     "links": [
-      "https://flash-host.fr",
-      "https://github.com"
+      "https://flash-host.fr"
     ]
   },
   {
